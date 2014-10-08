@@ -133,12 +133,7 @@ export PS2="\[$ORANGE\]→ \[$RESET\]"
 
 
 ### Misc
-# Add tab completion for many Bash commands
-if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-	source "$(brew --prefix)/etc/bash_completion";
-elif [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion;
-fi;
+
 
 
 # Only show the current directory's name in the tab
@@ -149,3 +144,5 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH=/usr/local/bin:$PATH
